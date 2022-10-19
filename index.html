@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .wrap {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .choice {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .choice div {
+        flex-basis: 33%;
+        height: 200px;
+        background-color: #ddd;
+        margin: 10px;
+        line-height: 200px;
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
+    <div class="wrap">
+      <h1>Rock Paper Scissors</h1>
+      <section class="choice">
+        <div>Rock</div>
+        <div>Paper</div>
+        <div>Scissors</div>
+      </section>
+      <button>Graj</button>
+      <section>
+        <p>Wynik: <span></span></p>
+        <p>Wygrane: <span></span></p>
+        <p>Przegrane: <span></span></p>
+      </section>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
