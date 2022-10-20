@@ -1,6 +1,8 @@
 class AI {
-  constructor(possibleChoices) {
-    this.possibleChoices = possibleChoices;
+  constructor() {
+    this.possibleChoices = ['rock', 'paper', 'scissors'];
+    let _aiChoice = this.makeChoice();
+    this.getAIChoice = () => _aiChoice;
   }
 
   makeChoice() {

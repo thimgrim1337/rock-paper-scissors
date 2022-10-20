@@ -1,9 +1,7 @@
 class Player {
   constructor(playerChoice) {
-    this.playerChoice = playerChoice;
-  }
-  getPlayerChoice() {
-    return this.playerChoice;
+    let _playerChoice = playerChoice;
+    this.getPlayerChoice = () => _playerChoice;
   }
 }
 export default Player;
