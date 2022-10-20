@@ -14,6 +14,7 @@ class Game {
         e.target.style.border = '1px solid black';
       })
     );
+
     this.stats = new Stats();
     document
       .getElementById('start')
@@ -36,6 +37,7 @@ class Game {
 
   startGame() {
     const ai = new AI(this.options);
+    if (this.player.getPlayerChoice() === '') return alert('Wybierz opcję');
     const win = Result.checkWinner(
       this.player.getPlayerChoice(),
       ai.getAIChoice()
