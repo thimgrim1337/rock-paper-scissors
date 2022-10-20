@@ -1,0 +1,24 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thimgrim1337/rock-paper-scissors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thimgrim1337/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/thimgrim1337/rock-paper-scissors#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
