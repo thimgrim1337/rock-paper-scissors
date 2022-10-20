@@ -8,17 +8,9 @@ class Statistics - przechowuje rozegrane gry i zwraca statystyki
 */
 
 import AI from './AI.js';
+import Game from './Game.js';
 import Player from './Player.js';
 import Result from './Result.js';
 import Stats from './Stats.js';
 
-const ai = new AI();
-console.log(ai.getAIChoice());
-
-const player = new Player('rock');
-console.log(player.getPlayerChoice());
-
-const game = Result.checkWinner(player.getPlayerChoice(), ai.getAIChoice());
-const stats = new Stats();
-stats.addGameToStats(game);
-stats.showGameStats();
+const game = new Game();
