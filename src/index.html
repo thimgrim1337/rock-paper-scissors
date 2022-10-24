@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         padding: 0;
@@ -12,55 +26,105 @@
         box-sizing: border-box;
       }
       body {
-        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-image: url('./images/bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'MedievalSharp', sans-serif;
       }
+
       .wrap {
         width: 80%;
-        margin: 0 auto;
+        padding: 40px 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      h1,
+      h2,
+      .wrap > p {
+        text-align: center;
       }
 
       h1 {
-        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 10px;
+        color: #312810;
+        text-shadow: 0 0 10px white;
+      }
+
+      h2 {
+        margin-bottom: 50px;
+      }
+
+      .wrap > p {
+        color: white;
+        text-shadow: 0 0 10px black;
+        font-size: 5rem;
+        font-weight: bold;
       }
 
       .choice {
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
       }
 
-      .choice div {
-        flex-basis: 33%;
-        height: 200px;
-        background-color: #ddd;
-        margin: 10px;
-        line-height: 200px;
-        text-align: center;
+      .choice img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 0 10px black;
+        padding: 20px;
       }
 
-      button {
+      #start {
+        font-family: 'MedievalSharp', sans-serif;
         display: block;
         margin: 0 auto;
         padding: 10px 20px;
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .fa-wand-magic-sparkles {
+        margin-right: 15px;
+      }
+
+      .results {
+        color: white;
+        font-size: 2rem;
       }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <h1>Rock Paper Scissors</h1>
+      <h1>Sword Axe & Spear</h1>
+      <h2>Pick one and check your destiny</h2>
+      <p><span class="result"></span></p>
       <section class="choice">
-        <div data-option="rock">Rock</div>
-        <div data-option="paper">Paper</div>
-        <div data-option="scissors">Scissors</div>
+        <img data-option="sword" src="./images/sword.png" alt="sword" />
+        <img data-option="axe" src="./images/axe.png" alt="axe" />
+        <img data-option="spear" src="./images/spear.png" alt="spear" />
       </section>
-      <button id="start">Graj</button>
-      <section>
-        <p>Wynik: <span class="result"></span></p>
-        <p>Rozegranych gier: <span class="total"></span></p>
-        <p>Wygrane: <span class="wins"></span></p>
-        <p>Remisy: <span class="draws"></span></p>
-        <p>Przegrane: <span class="losses"></span></p>
+
+      <button id="start">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>Fight
+      </button>
+      <section class="results">
+        <p>Total battles: <span class="total"></span></p>
+        <p>Wins: <span class="wins"></span></p>
+        <p>Losses: <span class="draws"></span></p>
+        <p>Draws: <span class="losses"></span></p>
       </section>
     </div>
 

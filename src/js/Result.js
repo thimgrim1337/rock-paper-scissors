@@ -1,14 +1,21 @@
 class Result {
   static checkWinner(playerChoice, aiChoice) {
     if (playerChoice === aiChoice)
-      return { result: 'remis', msg: `${playerChoice} jest równy ${aiChoice}` };
+      return {
+        result: 'draw',
+        msg: `It's draw ${playerChoice} is equal ${aiChoice}`,
+      };
     else if (
-      (playerChoice === 'rock' && aiChoice === 'scissors') ||
-      (playerChoice === 'paper' && aiChoice === 'rock') ||
-      (playerChoice === 'scissors' && aiChoice === 'paper')
+      (playerChoice === 'sword' && aiChoice === 'axe') ||
+      (playerChoice === 'axe' && aiChoice === 'spear') ||
+      (playerChoice === 'spear' && aiChoice === 'sword')
     )
-      return { result: true, msg: `${playerChoice} bije ${aiChoice}` };
-    else return { result: false, msg: `${aiChoice} bije ${playerChoice}` };
+      return { result: true, msg: `You win ${playerChoice} beats ${aiChoice}` };
+    else
+      return {
+        result: false,
+        msg: `You loss ${aiChoice} beats ${playerChoice}`,
+      };
   }
 }
 export default Result;
